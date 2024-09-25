@@ -19,6 +19,24 @@ upscale_dir=${models_dir}/upscale_models
 
 ### Install custom nodes
 
+
+
+# Crystools
+this_node_dir=${nodes_dir}/Crystools
+if [[ ! -d $this_node_dir ]]; then
+    git clone https://github.com/crystian/ComfyUI-Crystools $this_node_dir
+else
+    (cd $this_node_dir && git pull)
+fi
+
+# ComfyUI-Custom-Scripts
+this_node_dir=${nodes_dir}/Crystools
+if [[ ! -d $this_node_dir ]]; then
+    git clone https://github.com/pythongosssss/ComfyUI-Custom-Scripts $this_node_dir
+else
+    (cd $this_node_dir && git pull)
+fi
+
 # ComfyUI-Manager
 this_node_dir=${nodes_dir}/ComfyUI-Manager
 if [[ ! -d $this_node_dir ]]; then
